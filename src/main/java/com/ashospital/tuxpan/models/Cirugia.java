@@ -1,7 +1,7 @@
 package com.ashospital.tuxpan.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,7 +11,11 @@ import java.util.Set;
 
 // Entidad Cirugia
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Table(name = "cirugias")
 public class Cirugia {
     @Id
