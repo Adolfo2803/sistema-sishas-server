@@ -1,9 +1,10 @@
 package com.ashospital.tuxpan.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
+
 
 // Entidad PersonalBase
 @MappedSuperclass

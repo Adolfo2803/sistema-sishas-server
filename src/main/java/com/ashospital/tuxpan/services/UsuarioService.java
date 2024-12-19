@@ -28,7 +28,6 @@ import java.util.List;
 
 @Service
 @Transactional
-
 public class UsuarioService {
     public UsuarioService(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder, JwtService jwtService, AuthenticationManager authenticationManager) {
         this.usuarioRepository = usuarioRepository;

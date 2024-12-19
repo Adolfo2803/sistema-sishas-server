@@ -10,9 +10,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
+
 public class InternoService {
     private final InternoRepository internoRepository;
+
+    public InternoService(InternoRepository internoRepository) {
+        this.internoRepository = internoRepository;
+    }
 
     public List<Interno> listarTodos() {
         return internoRepository.findAll();
