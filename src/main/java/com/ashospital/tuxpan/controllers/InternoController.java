@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/internos")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 @PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")
 public class InternoController {
     private final InternoService internoService;

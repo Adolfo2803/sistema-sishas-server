@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/instrumentistas")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 @PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")
 public class InstrumentistaController {
     private final InstrumentistaService instrumentistaService;
