@@ -27,6 +27,7 @@ public class Cirugia {
     private String material;
     private String medicamento;
     private String suturas;
+    private String tipoCirugia;
 
     @ManyToOne
     @JoinColumn(name = "paciente_id", nullable = false)
@@ -78,7 +79,7 @@ public class Cirugia {
     public Cirugia() {
     }
 
-    public Cirugia(Long id, String numeroCirugia, Integer numeroQuirofano, LocalDate fechaCirugia, LocalTime iniciaAnestesia, LocalTime terminaAnestesia, String material, String medicamento, String suturas, Paciente paciente, Cirujano cirujano, Anestesiologo anestesiologo, Instrumentista instrumentista, Circulante circulante, Set<Residente> residentes, Set<Interno> internos, Set<ApoyoExterno> apoyoExterno, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Cirugia(Long id, String numeroCirugia, Integer numeroQuirofano, LocalDate fechaCirugia, LocalTime iniciaAnestesia, LocalTime terminaAnestesia, String material, String medicamento, String suturas, String tipoCirugia, Paciente paciente, Cirujano cirujano, Anestesiologo anestesiologo, Instrumentista instrumentista, Circulante circulante, Set<Residente> residentes, Set<Interno> internos, Set<ApoyoExterno> apoyoExterno, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.numeroCirugia = numeroCirugia;
         this.numeroQuirofano = numeroQuirofano;
@@ -88,6 +89,7 @@ public class Cirugia {
         this.material = material;
         this.medicamento = medicamento;
         this.suturas = suturas;
+        this.tipoCirugia = tipoCirugia;
         this.paciente = paciente;
         this.cirujano = cirujano;
         this.anestesiologo = anestesiologo;
@@ -170,6 +172,14 @@ public class Cirugia {
 
     public void setSuturas(String suturas) {
         this.suturas = suturas;
+    }
+
+    public String getTipoCirugia() {
+        return tipoCirugia;
+    }
+
+    public void setTipoCirugia(String tipoCirugia) {
+        this.tipoCirugia = tipoCirugia;
     }
 
     public Paciente getPaciente() {

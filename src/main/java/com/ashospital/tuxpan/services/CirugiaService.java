@@ -57,6 +57,7 @@ import java.util.Set;
             cirugia.setResidentes(cirugiaDetails.getResidentes());
             cirugia.setInternos(cirugiaDetails.getInternos());
             cirugia.setApoyoExterno(cirugiaDetails.getApoyoExterno());
+            cirugia.setTipoCirugia(cirugiaDetails.getTipoCirugia());
 
             cirugia.setUpdatedAt(LocalDateTime.now());
 
