@@ -11,8 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/circulantes")
-@CrossOrigin(origins = "http://localhost:4200")
-@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")
+@CrossOrigin(origins = "*")
+//@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO2')")
 public class CirculanteController {
     private final CirculanteService circulanteService;
 
@@ -36,6 +36,8 @@ public class CirculanteController {
     public ResponseEntity<Circulante> crear(@Valid @RequestBody Circulante circulante) {
         return ResponseEntity.ok(circulanteService.guardar(circulante));
     }
+
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {

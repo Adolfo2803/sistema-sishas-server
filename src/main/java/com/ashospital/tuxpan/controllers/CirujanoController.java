@@ -11,8 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cirujanos")
-@CrossOrigin(origins = "http://localhost:4200")
-@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")
+@CrossOrigin(origins = "*")
+//@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO2')")
 public class CirujanoController {
     private final CirujanoService cirujanoService;
 

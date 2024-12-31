@@ -8,8 +8,9 @@ import java.util.Optional;
 
 @Repository
 public interface PacienteRepository extends JpaRepository<Paciente, Long> {
-    Optional<Paciente> findByExpediente(String expediente);
-    Optional<Paciente> findByCurp(String curp);
+    Optional<Paciente> findByExpedienteContaining(String expediente);
+    Optional<Paciente> findByCurpContaining(String curp);
+    Optional<Paciente> findByNombreContaining(String nombre);
     boolean existsByExpediente(String expediente);
     boolean existsByCurp(String curp);
 

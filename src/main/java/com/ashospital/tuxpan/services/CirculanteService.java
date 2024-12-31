@@ -30,6 +30,8 @@ public class CirculanteService {
         return circulanteRepository.save(circulante);
     }
 
+
+
     public void eliminar(Long id) {
         circulanteRepository.deleteById(id);
     }

@@ -105,13 +105,19 @@ public class PacienteService {
     }
 
     public ResponseEntity<?> buscarPorExpediente(String expediente) {
-        return pacienteRepository.findByExpediente(expediente)
+        return pacienteRepository.findByExpedienteContaining(expediente)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     public ResponseEntity<?> buscarPorCurp(String curp) {
-        return pacienteRepository.findByCurp(curp)
+        return pacienteRepository.findByCurpContaining(curp)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    public ResponseEntity<?> buscarPorNombre(String nombre) {
+        return pacienteRepository.findByNombreContaining(nombre)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }

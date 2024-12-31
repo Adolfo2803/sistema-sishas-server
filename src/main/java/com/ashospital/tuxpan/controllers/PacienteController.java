@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pacientes")
-@CrossOrigin(origins = "http://localhost:4200")
-@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")  // Solo usuarios autenticados pueden acceder
+@CrossOrigin(origins = "*")
+//@PreAuthorize("hasAnyRole('ADMIN', 'USUARIO')")  Solo usuarios autenticados pueden acceder
 public class PacienteController {
 
     private final PacienteService pacienteService;
@@ -53,5 +53,10 @@ public class PacienteController {
     @GetMapping("/curp/{curp}")
     public ResponseEntity<?> buscarPorCurp(@PathVariable String curp) {
         return pacienteService.buscarPorCurp(curp);
+    }
+
+    @GetMapping("/nombre/{nombre}")
+    public ResponseEntity<?> buscarPorNombre(@PathVariable String nombre) {
+        return pacienteService.buscarPorNombre(nombre);
     }
 }

@@ -18,7 +18,7 @@ public class JwtResponse {
     private String token;
 
     @JsonProperty("tipo")
-    private String tipo = "Bearer";
+    private String type = "Bearer";
 
     @JsonProperty("username")
     private String username;
@@ -28,12 +28,12 @@ public class JwtResponse {
 
     public JwtResponse(String token) {
         this.token = token;
-        this.tipo = "Bearer";
+        this.type = "Bearer";
     }
 
-    public JwtResponse(String token, String tipo, String username, String rol) {
+    public JwtResponse(String token, String type, String username, String rol) {
         this.token = token;
-        this.tipo = tipo;
+        this.type = type;
         this.username = username;
         this.rol = rol;
     }
